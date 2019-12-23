@@ -1,0 +1,18 @@
+<%- include('../common/header') %>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Add Note</h1>
+    </div>
+    <div class="col-md-4 offset-md-4">
+        <form method="post" action="/notes/add/<%= req.params.bookid %>">
+            <div class="mb-3">
+                <label for="note">Your Note</label>
+                <input type="text" class="form-control" name="note" />
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary" value="Add" />
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../common/footer') %>

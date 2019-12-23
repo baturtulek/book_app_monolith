@@ -1,0 +1,30 @@
+<%- include('../common/header') %>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Add Book</h1>
+    </div>
+    <div class="col-md-4 offset-md-4">
+        <form method="post" action="/books/add">
+            <div class="mb-3">
+                <label for="name">Book Name :</label>
+                <input type="text" class="form-control" name="name" />
+            </div>
+            <div class="mb-3">
+                <label for="editor">Editor:</label>
+                <input type="text" class="form-control" name="editor" />
+            </div>
+            <div class="mb-3">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" name="author" />
+            </div>
+            <div class="mb-3">
+                <label for="author">Image Url:</label>
+                <input type="text" class="form-control" name="image" />
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary" value="Add" />
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../common/footer') %>

@@ -1,0 +1,31 @@
+<%- include('../common/header') %>
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <h1>Register</h1>
+  </div>
+  <div class="col-md-4 offset-md-4">
+    <form method="post" action="/user/register">
+        <div class="mb-3">
+            <% if(status === 409){ %>
+                <label>This Mail address already exists!</label>
+            <% } %>
+          </div>
+      <div class="mb-3">
+        <label for="email">Email :</label>
+        <input type="text" class="form-control" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="name">Username:</label>
+        <input type="text" class="form-control" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Register">
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('../common/footer') %>

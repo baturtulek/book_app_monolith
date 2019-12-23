@@ -1,0 +1,36 @@
+body {
+    padding-top: 5rem;
+    background-color: #F5F5F5;
+}
+.container {
+    padding: 1rem 0;
+}
+.book {
+    text-align: center;
+    margin: 0px auto;
+    width: 520px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.book table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+.heading{
+    font-size:17px;
+    padding-right: 30px;
+}
+
+.bookDetail{
+    margin-top: 80px;
+}
+
+.bookDetail p{
+    font-size:18px;
+}
+.detailHeading{
+    font-size:22px;
+    padding-right: 30px;
+}

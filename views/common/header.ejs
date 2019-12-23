@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Book Application</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+            integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/books">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/books/add">Add Book</a>
+                    </li>
+                </ul>
+                <% if (!session.user) { %>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/register">Register</a>
+                    </li>
+                </ul>
+                <% } else { %>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/mylist">My List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/logout">Log out</a>
+                        </li>
+                    </ul>
+                <% } %>
+            </div>
+        </nav>
+        <main role="main" class="container"></main>
+    </body>
+</html>

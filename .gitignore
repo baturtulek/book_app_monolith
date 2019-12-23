@@ -1,0 +1,8 @@
+# Mac Os Files
+.DS_Store
+
+# Dependency directories
+node_modules
+
+# Environment Variables
+.env

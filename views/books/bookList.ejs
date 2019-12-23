@@ -1,0 +1,40 @@
+<%- include('../common/header') %>
+<section>
+    <div class="text-center justify-content-center">
+        <% for (let book of books) { %>
+        <div class="book mt-5 mb-5">
+            <table align="center">
+                <tr>
+                    <td colspan="2">
+                        <h1><%= book.name %></h1>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="heading"><b>Editor : </b></td>
+                    <td><%= book.editor %></td>
+                </tr>
+                <tr>
+                    <td class="heading"><b>Author : </b></td>
+                    <td><%= book.author %></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>
+                        <a href="/books/detail/<%= book.id %>">Details</a>
+                    </td>
+                    <td>
+                        <a href="/user/addlist/<%= book.id %>">Add My List</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="/books/delete/<%= book.id %>">Delete Book</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <% } %>
+    </div>
+</section>
+<%- include('../common/footer') %>

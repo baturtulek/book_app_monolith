@@ -1,0 +1,22 @@
+<%- include('../common/header') %>
+<section>
+    <div class="text-center justify-content-center">
+        <div class="book mt-5 mb-5">
+            <table align="center">
+                <tr>
+                    <td colspan="2">
+                        <h1><%= docs[0].book.name %></h1>
+                    </td>
+                </tr>
+                <tr></tr>
+                <% for (let note of docs) { %>
+                <tr>
+                    <td class="heading"><b>Notes</b></td>
+                    <td><%= note.note %></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</section>
+<%- include('../common/footer') %>
